@@ -29,7 +29,7 @@ export default function Checkout() {
   const params = useSearchParams();
 
   const publishableKey =
-    "pk_test_51NMv6ZSC6E6fnyMeRIEb9oEXdGRCC9yrBTT4xWHgcjWOuFcqFiAHErvaS50K1hl5t5WJXVGfLLWxvb705IWJhA3300yCcrMnlM";
+    "pk_test_51N5YwnCClCk5zvkrrHfnM36kksGwgSsihBTlEySg3YSX36lymrxnKmWctVGN1bWp95cfIZryFNvAeCzaUHe1mh2400Cg3MDsyf";
   const stripePromise = loadStripe(publishableKey);
 
   console.log(cartItems);
@@ -170,8 +170,7 @@ export default function Checkout() {
             <div className="bg-white shadow">
               <div className="px-4 py-6 sm:px-8 sm:py-10 flex flex-col gap-5">
                 <h1 className="font-bold text-lg">
-                  Your payment is successfull and you will be redirected to
-                  orders page in 2 seconds !
+                  Tu pago fue exitoso y serás redirigido a la pagina de ordenes!
                 </h1>
               </div>
             </div>
@@ -198,7 +197,7 @@ export default function Checkout() {
     <div>
       <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
         <div className="px-4 pt-8">
-          <p className="font-medium text-xl">Cart Summary</p>
+          <p className="font-medium text-xl">Total Carrito</p>
           <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-5">
             {cartItems && cartItems.length ? (
               cartItems.map((item) => (
@@ -222,14 +221,14 @@ export default function Checkout() {
                 </div>
               ))
             ) : (
-              <div>Your cart is empty</div>
+              <div>Tu carrito está vacío</div>
             )}
           </div>
         </div>
         <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
-          <p className="text-xl font-medium">Shipping address details</p>
+          <p className="text-xl font-medium">Detalles de dirección de compra</p>
           <p className="text-gray-400 font-bold">
-            Complete your order by selecting address below
+            Completa tu orden seleccionando una dirección debajo
           </p>
           <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-6">
             {addresses && addresses.length ? (
@@ -241,27 +240,27 @@ export default function Checkout() {
                     item._id === selectedAddress ? "border-red-900" : ""
                   }`}
                 >
-                  <p>Name : {item.fullName}</p>
-                  <p>Address : {item.address}</p>
-                  <p>City : {item.city}</p>
-                  <p>Country : {item.country}</p>
-                  <p>PostalCode : {item.postalCode}</p>
+                  <p>Nombre: {item.fullName}</p>
+                  <p>Dirección: {item.address}</p>
+                  <p>Ciudad: {item.city}</p>
+                  <p>Pais: {item.country}</p>
+                  <p>Codigo: {item.postalCode}</p>
                   <button className="mt-5 mr-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
                     {item._id === selectedAddress
-                      ? "Selected Address"
-                      : "Select Address"}
+                      ? "Dirección seleccionada"
+                      : "Selecciona dirección"}
                   </button>
                 </div>
               ))
             ) : (
-              <p>No addresses added</p>
+              <p>Dirección no añadida</p>
             )}
           </div>
           <button
             onClick={() => router.push("/account")}
             className="mt-5 mr-5 inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
           >
-            Add new address
+            Agregar dirección
           </button>
           <div className="mt-6 border-t border-b py-2">
             <div className="flex items-center justify-between">
@@ -277,8 +276,8 @@ export default function Checkout() {
               </p>
             </div>
             <div className="flex items-center justify-between">
-              <p className="text-sm font-medium text-gray-900">Shipping</p>
-              <p className="text-lg font-bold text-gray-900">Free</p>
+              <p className="text-sm font-medium text-gray-900">Envío</p>
+              <p className="text-lg font-bold text-gray-900">GRATIS</p>
             </div>
             <div className="flex items-center justify-between">
               <p className="text-sm font-medium text-gray-900">Total</p>
@@ -301,7 +300,7 @@ export default function Checkout() {
                 onClick={handleCheckout}
                 className="disabled:opacity-50 mt-5 mr-5 w-full  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
               >
-                Checkout
+                Pagar
               </button>
             </div>
           </div>
