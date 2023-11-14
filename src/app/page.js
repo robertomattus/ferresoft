@@ -48,7 +48,7 @@ export default function Home() {
             </button>
 
             <a
-              href="https://api.whatsapp.com/send?phone=529842051122&text=Hello! Hola, necesito asistencia..."
+              href="https://api.whatsapp.com/send?phone=529842051122&text=Hola!!, necesito asistencia..."
               target="_blank"
               rel="noreferrer"
             >
