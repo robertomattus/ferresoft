@@ -73,11 +73,11 @@ export default function Orders() {
                       >
                         <div className="flex">
                           <h1 className="font-bold text-lg mb-3 flex-1">
-                            #order: {item._id}
+                            #orden: {item._id}
                           </h1>
                           <div className="flex items-center">
                             <p className="mr-3 text-sm font-medium text-gray-900">
-                              Total paid amount
+                              Monto total del pago
                             </p>
                             <p className="mr-3 text-2xl  font-semibold text-gray-900">
                               ${item.totalPrice}
@@ -102,14 +102,14 @@ export default function Orders() {
                         <div className="flex gap-5">
                           <button className="disabled:opacity-50 mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide">
                             {item.isProcessing
-                              ? "Order is Processing"
-                              : "Order is delivered"}
+                              ? "Orden en proceso"
+                              : "Orden entregada"}
                           </button>
                           <button
                             onClick={() => router.push(`/orders/${item._id}`)}
                             className=" mt-5 mr-5  inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
                           >
-                            View Order Details
+                            Ver detalles
                           </button>
                         </div>
                       </li>
