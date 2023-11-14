@@ -46,6 +46,19 @@ export default function Home() {
             >
               Explora ahora
             </button>
+
+            <a
+              href="https://api.whatsapp.com/send?phone=529842051122&text=Hello! Hola, necesito asistencia..."
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button
+                type="button"
+                className="ml-2 mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+              >
+                Contáctanos
+              </button>
+            </a>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img
